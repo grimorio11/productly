@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{# Extiende la plantilla base #}
+
+{% block content %}
+{# Bloque de contenido #}
+<div>
+    <h6>{{ producto.nombre }}</h6>
+    <p>Categoria: {{ producto.categoria }}</p>
+    <p>Stock: {{ producto.stock }}</p>
+    <p>Puntaje: {{ producto.puntaje }}</p>
+    <p>Creado: {{ producto.creado_en }}</p>
+</div>
+
+{% endblock %}
+{# Fin del bloque de contenido #}
