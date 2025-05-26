@@ -59,8 +59,8 @@ jobs:
       env:
         KUBECONFIG: ${{ github.workspace }}/kubeconfig
       run: |
-       pwd
-       cd my-app 
+       pwd && \
+       cd my-app && \
        helm upgrade --install my-app . \
        --set image.repository=yourImageRepository \
        --set image.tag=${{ github.sha }} \
