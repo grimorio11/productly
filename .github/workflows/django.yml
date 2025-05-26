@@ -46,6 +46,14 @@ jobs:
     - name: Build Docker image
       run: |
         kubectl get nodes
+    - name: deploy
+      uses: firehed/deploy-to-kubernetes-action@v0.3.0
+        with:
+          namespace: default
+          deployment: www
+          container: server
+          image: grimorio11/nginx-helm:latest
+          
     # - name: Run Docker container
     #   run: |
     #     docker run -d -p 8000:8000 my-django-app
