@@ -48,11 +48,11 @@ jobs:
         kubectl get nodes
     - name: deploy
       uses: firehed/deploy-to-kubernetes-action@v0.3.0
-        with:
-          namespace: default
-          deployment: www
-          container: server
-          image: grimorio11/nginx-helm:latest
+      with:
+        namespace: default
+        deployment: www
+        container: server
+        image: grimorio11/nginx-helm:latest
           
     # - name: Run Docker container
     #   run: |
