@@ -47,8 +47,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and push Docker image
       run: |
-        docker build -t yourImageRepository:${{ github.sha }} .
-        docker push yourImageRepository:${{ github.sha }}
+        docker build -t grimorio11/nginx-helm:${{ github.sha }} .
+        docker push grimorio11/nginx-helm:${{ github.sha }}
     # - name: Build Docker image
     #   run: |
     #     kubectl get nodes
