@@ -1,4 +1,4 @@
-name: Django CI
+vname: Django CI
 
 on:
   push:
@@ -57,7 +57,7 @@ jobs:
 
     - name: Deploy to Kubernetes using Helm
       env:
-        KUBECONFIG: ${{ secret.KUBECONFIG_K0S }}
+        KUBECONFIG: ${{ env.KUBECONFIG_K0S }}
       run: |
        pwd && \
        cd /home/runner2/my-app && \
