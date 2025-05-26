@@ -60,7 +60,7 @@ jobs:
         KUBECONFIG: ${{ github.workspace }}/kubeconfig
       run: |
        pwd && \
-       cd my-app && \
+       cd /home/runner2/my-app && \
        helm upgrade --install my-app . \
        --set image.repository=yourImageRepository \
        --set image.tag=${{ github.sha }} \
