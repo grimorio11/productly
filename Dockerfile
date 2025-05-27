@@ -3,4 +3,4 @@ RUN apk add --no-cache \
     curl \
     bash 
 
-VOLUME /data
+VOLUME . /data
