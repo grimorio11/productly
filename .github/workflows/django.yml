@@ -58,8 +58,7 @@ jobs:
       env:
         KUBECONFIG: ${{ env.KUBECONFIG_K0S }}
       run: |
-       pwd && \
-       cd /home/runner2/my-app && \
+       cd /home/runner2/my-app 
        helm upgrade --install my-app . \
        --set image.repository=grimorio11/nginx-helm \
        --set image.tag=latest \
